@@ -1,0 +1,42 @@
+name: Issue Label
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  issue_label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('feat{0} ', ':')
+        with:
+          add_labels: "feat"
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('fix{0} ', ':'))
+        with:
+          add_labels: "fix"
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('docs{0} ', ':'))
+        with:
+          add_labels: "docs"
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('style{0} ', ':'))
+        with:
+          add_labels: "style"
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('refactor{0} ', ':'))
+        with:
+          add_labels: "refactor"
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('prefs{0} ', ':'))
+        with:
+          add_labels: "prefs"
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('test{0} ', ':'))
+        with:
+          add_labels: "test"
+      - uses: andymckay/labeler@master
+        if: startsWith(github.event.issue.title, format('chore{0} ', ':'))
+        with:
+          add_labels: "chore"
