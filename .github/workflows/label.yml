@@ -29,9 +29,9 @@ jobs:
         with:
           add-labels: "type: refactor"
       - uses: andymckay/labeler@master
-        if: startsWith(github.event.issue.title, format('prefs{0} ', ':'))
+        if: startsWith(github.event.issue.title, format('pref{0} ', ':'))
         with:
-          add-labels: "type: prefs"
+          add-labels: "type: pref"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('test{0} ', ':'))
         with:
