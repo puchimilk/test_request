@@ -11,31 +11,31 @@ jobs:
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('feat{0} ', ':'))
         with:
-          add-labels: "feat"
+          add-labels: "typ: feat"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('fix{0} ', ':'))
         with:
-          add-labels: "fix"
+          add-labels: "type: fix"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('docs{0} ', ':'))
         with:
-          add-labels: "docs"
+          add-labels: "type: docs"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('style{0} ', ':'))
         with:
-          add-labels: "style"
+          add-labels: "type: style"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('refactor{0} ', ':'))
         with:
-          add-labels: "refactor"
+          add-labels: "type: refactor"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('prefs{0} ', ':'))
         with:
-          add-labels: "prefs"
+          add-labels: "type: prefs"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('test{0} ', ':'))
         with:
-          add-labels: "test"
+          add-labels: "type: test"
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('chore{0} ', ':'))
         with:
