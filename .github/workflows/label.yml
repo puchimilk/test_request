@@ -39,4 +39,4 @@ jobs:
       - uses: andymckay/labeler@master
         if: startsWith(github.event.issue.title, format('chore{0} ', ':'))
         with:
-          add-labels: "chore"
+          add-labels: "type: chore"
